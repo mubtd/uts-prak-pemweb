@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Bootcamp 2026 - Independent Project</title>
+
+    <!-- CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/preloader.css" rel="stylesheet">
+    <link href="assets/css/music-player.css" rel="stylesheet">
+    <link href="assets/css/entry-gate.css" rel="stylesheet">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="../_ext/fonts.googleapis.com/css2_q1afjzbf.css" rel="stylesheet">
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="assets/img/logo/logo_itb.svg" type="image/x-icon">
+    <link rel="icon" href="assets/img/logo/logo_itb.svg" type="image/x-icon">
+  <style>/* injected by HTMLify — off-site link marker */
+.htmlify-external::after{content:"\2197";font-size:0.75em;vertical-align:super;margin-left:2px;opacity:0.65;}</style></head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader-scene">
+      <div class="scene">
+        <div class="forest">
+          <div class="tree tree1">
+            <div class="branch branch-top"></div>
+            <div class="branch branch-middle"></div>
+          </div>
+          <div class="tree tree2">
+            <div class="branch branch-top"></div>
+            <div class="branch branch-middle"></div>
+            <div class="branch branch-bottom"></div>
+          </div>
+          <div class="tree tree3">
+            <div class="branch branch-top"></div>
+            <div class="branch branch-middle"></div>
+            <div class="branch branch-bottom"></div>
+          </div>
+          <div class="tree tree4">
+            <div class="branch branch-top"></div>
+            <div class="branch branch-middle"></div>
+            <div class="branch branch-bottom"></div>
+          </div>
+          <div class="tree tree5">
+            <div class="branch branch-top"></div>
+            <div class="branch branch-middle"></div>
+            <div class="branch branch-bottom"></div>
+          </div>
+          <div class="tree tree6">
+            <div class="branch branch-top"></div>
+            <div class="branch branch-middle"></div>
+            <div class="branch branch-bottom"></div>
+          </div>
+          <div class="tree tree7">
+            <div class="branch branch-top"></div>
+            <div class="branch branch-middle"></div>
+            <div class="branch branch-bottom"></div>
+          </div>
+        </div>
+        <div class="tent">
+          <div class="roof"></div>
+          <div class="roof-border-left">
+            <div class="roof-border roof-border1"></div>
+            <div class="roof-border roof-border2"></div>
+            <div class="roof-border roof-border3"></div>
+          </div>
+          <div class="entrance">
+            <div class="door left-door">
+              <div class="left-door-inner"></div>
+            </div>
+            <div class="door right-door">
+              <div class="right-door-inner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="floor">
+          <div class="ground ground1"></div>
+          <div class="ground ground2"></div>
+        </div>
+        <div class="fireplace">
+          <div class="support"></div>
+          <div class="support"></div>
+          <div class="bar"></div>
+          <div class="hanger"></div>
+          <div class="smoke"></div>
+          <div class="pan"></div>
+          <div class="fire">
+            <div class="line line1">
+              <div class="particle particle1"></div>
+              <div class="particle particle2"></div>
+              <div class="particle particle3"></div>
+              <div class="particle particle4"></div>
+            </div>
+            <div class="line line2">
+              <div class="particle particle1"></div>
+              <div class="particle particle2"></div>
+              <div class="particle particle3"></div>
+              <div class="particle particle4"></div>
+            </div>
+            <div class="line line3">
+              <div class="particle particle1"></div>
+              <div class="particle particle2"></div>
+              <div class="particle particle3"></div>
+              <div class="particle particle4"></div>
+            </div>
+          </div>
+        </div>
+        <div class="time-wrapper">
+          <div class="time">
+            <div class="day"></div>
+            <div class="night">
+              <div class="moon"></div>
+              <div class="star star1 star-big"></div>
+              <div class="star star2 star-big"></div>
+              <div class="star star3 star-big"></div>
+              <div class="star star4"></div>
+              <div class="star star5"></div>
+              <div class="star star6"></div>
+              <div class="star star7"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- ============ HEADER (over hero) ============ -->
+    <header id="navbar" class="site-header">
+      <div class="brand">
+        <div class="brand__frame">
+          <img class="brand__frame-bg" src="assets/img/logo/frame_bg.jpg" alt="">
+          <div class="brand__logo">
+            <img src="assets/img/logo/logo_itb.png" alt="Logo IT Bootcamp">
+          </div>
+        </div>
+        <span class="brand__name">IT BOOTCAMP</span>
+      </div>
+
+      <button class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Buka menu navigasi">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Navigasi utama">
+        <a class="nav__link" href="#home">Home</a>
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#tujuan">Tujuan</a>
+        <a class="nav__link" href="#maskot-logo">Maskot &amp; Logo</a>
+        <a class="nav__link" href="#dokumentasi2">Dokumentasi</a>
+      </nav>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <picture class="hero__bg">
+        <source media="(max-width: 768px)" srcset="assets/img/background/hero_mobile_bg.webp">
+
+        <img src="assets/img/background/hero_bg.webp" alt="Pemandangan Minecraft">
+      </picture>
+
+      <div class="hero__content">
+        <div class="hero__title-group">
+          <div class="hero__title-block">
+            <img class="hero__title-badge" src="assets/img/icon/hero_title1.png" alt="IT Bootcamp 2026 - Independent Project">
+            <img class="hero__title-main" src="assets/img/icon/hero_title2.png" alt="Minecraft Title">
+          </div>
+          <p class="hero__subtitle">
+            Fostering Smart Innovation and Programming Skills to Build a
+            Successful Digital Career
+          </p>
+        </div>
+        <div class="hero__cta-wrapper">
+          <button class="btn-pixel btn-pixel__daftar" type="button" onclick="window.location.href = 'pendaftaran.html'">
+            <span class="btn-pixel__label">DAFTAR SEGERA</span>
+            <span class="btn-pixel__pixel" style="left: 56px; top: 15px; width: 20px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="left: 37px; top: 25px; width: 10px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="right: 18px; top: 35px; width: 20px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="right: 47px; top: 15px; width: 10px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="right: 96px; top: 35px; width: 10px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="left: 17px; top: 35px; width: 20px; height: 10px"></span>
+          </button>
+          <button class="btn-pixel btn-pixel__karya" type="button" onclick="window.location.href = 'karya-peserta.html'">
+            <span class="btn-pixel__label">KARYA PESERTA</span>
+            <span class="btn-pixel__pixel" style="left: 56px; top: 15px; width: 20px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="left: 37px; top: 25px; width: 10px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="right: 18px; top: 35px; width: 20px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="right: 47px; top: 15px; width: 10px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="right: 96px; top: 35px; width: 10px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="left: 17px; top: 35px; width: 20px; height: 10px"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__grid">
+        <div class="about__heading-col">
+          <!-- Frame & Logo dipindah ke dalam kolom judul -->
+          <div class="about__frame">
+            <img class="about__frame-bg" src="assets/img/logo/frame_bg.jpg" alt="">
+            <div class="about__frame-logo">
+              <img src="assets/img/logo/logo_itb.png" alt="Logo IT Bootcamp">
+            </div>
+          </div>
+
+          <span style="user-select: none" class="section-badge">About</span>
+          <h2 class="section-title about__title">
+            <u>APA ITU</u><br>IT BOOTCAMP?
+          </h2>
+
+          <!-- Gambar Buku dipindah ke dalam kolom judul agar sejajar dengan kata BOOTCAMP -->
+          <img class="about__book" src="assets/img/logo/echanted-book.gif" alt="Buku">
+        </div>
+
+        <p class="about__text">
+          <b>IT Bootcamp: Independent Project</b> merupakan serangkaian kegiatan
+          yang diadakan untuk mempersiapkan mahasiswa baru Informatika dalam
+          mengembangkan kemampuan di bidang IT dan mempersiapkan diri menghadapi
+          era digital.
+        </p>
+      </div>
+
+      <div class="about__figure">
+        <img class="about__figure_background" src="assets/img/background/about_bg.jpg" alt="Kegiatan IT Bootcamp">
+        <img class="about__deco about__deco--left" src="assets/img/icon/dekor_lampu.png" alt="Dokumentasi kegiatan 1">
+        <img class="about__deco about__deco--right" src="assets/img/icon/dekor_kucing.png" alt="Dokumentasi kegiatan 2">
+      </div>
+      <div class="about__spacer"></div>
+    </section>
+
+    <!-- ============ TUJUAN ============ -->
+    <section class="tujuan" id="tujuan">
+      <div class="tujuan__head">
+        <div class="tujuan__header-col">
+          <span class="section-badge">Skill Tree</span>
+          <h2 class="section-title"><u>TIGA HAL</u> YANG AKAN KAMU DAPATKAN</h2>
+        </div>
+        <div class="tujuan__deco" aria-hidden="true">
+          <img class="pick-mineral" src="assets/img/icon/diamond.png" alt="">
+          <img class="pick-flower1" src="assets/img/icon/gold.png" alt="">
+          <img class="pick-flower2" src="assets/img/icon/emerald.png" alt="">
+          <img class="pick-pickaxe" src="assets/img/icon/pick.png" alt="">
+        </div>
+      </div>
+
+      <p class="tujuan__intro">
+        Belajar tidak hanya tentang teknologi, tetapi juga tentang kolaborasi
+        dan pengembangan diri.
+      </p>
+
+      <div class="tujuan__cards">
+        <article class="skill-card">
+          <div class="skill-card__img-wrap">
+            <img class="skill-card__bg" src="assets/img/background/bg_card1.webp" alt="">
+            <div class="skill-card__gradient"></div>
+            <div class="skill-card__row">
+              <h3 class="skill-card__title">Asah Skill</h3>
+              <img class="skill-card__icon" src="assets/img/icon/sword.png" alt="Ikon Asah Skill">
+            </div>
+          </div>
+          <p class="skill-card__desc">
+            Mengasah hardskill teknis di bidang IT serta softskill komunikasi
+            mahasiswa baru sebagai bekal utama perkuliahan.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card__img-wrap">
+            <img class="skill-card__bg" src="assets/img/background/bg_card2.webp" alt="">
+            <div class="skill-card__gradient"></div>
+            <div class="skill-card__row">
+              <h3 class="skill-card__title">Bangun Relasi</h3>
+              <img class="skill-card__icon" src="assets/img/icon/cp_fire.png" alt="Ikon Bangun Relasi">
+            </div>
+          </div>
+          <p class="skill-card__desc">
+            Menumbuhkan ikatan keakraban, kekeluargaan, dan solidaritas yang
+            kuat antar sesama mahasiswa Prodi Informatika.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card__img-wrap">
+            <img class="skill-card__bg" src="assets/img/background/bg_card3.webp" alt="">
+            <div class="skill-card__gradient"></div>
+            <div class="skill-card__row">
+              <h3 class="skill-card__title">Adaptasi Kampus</h3>
+              <img class="skill-card__icon" src="assets/img/icon/buku_tulis.png" alt="Ikon Adaptasi Kampus">
+            </div>
+          </div>
+          <p class="skill-card__desc">
+            Mengenalkan sistem pembelajaran, fasilitas, dan kegiatan kampus di
+            ruang lingkup Prodi Informatika secara menyeluruh.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PENDAFTARAN ============ -->
+    <section class="pendaftaran" id="pendaftaran">
+      <img class="pendaftaran__land" src="assets/img/background/bg_bunga.png" alt="">
+      <div class="pendaftaran__card">
+        <picture class="pendaftaran__bg">
+          <!-- Gambar versi Mobile (di bawah 768px) -->
+          <source media="(max-width: 768px)" srcset="assets/img/background/bg_daftar_mobile.webp">
+
+          <!-- Gambar versi Desktop (default / fallback) -->
+          <img src="assets/img/background/bg_daftar.webp" alt="Background Pendaftaran" width="1280" height="605">
+        </picture>
+        <div class="pendaftaran__content">
+          <div class="pendaftaran__copy">
+            <div class="pendaftaran__head">
+              <span class="section-badge section-badge--onbrown">Registration</span>
+              <h2 class="section-title section-title--white">
+                <u>MEMASUKI</u> DUNIA BARU
+              </h2>
+            </div>
+            <p class="pendaftaran__text">
+              Bersiaplah untuk memulai perjalananmu di IT Bootcamp bersama
+              mahasiswa Informatika lainnya.
+            </p>
+          </div>
+          <button class="btn-pixel btn-pixel__daftar" type="button" onclick="window.location.href = 'pendaftaran.html'">
+            <span class="btn-pixel__label">DAFTAR SEGERA</span>
+            <span class="btn-pixel__pixel" style="left: 56px; top: 15px; width: 20px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="left: 37px; top: 25px; width: 10px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="right: 18px; top: 35px; width: 20px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="right: 47px; top: 15px; width: 10px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="right: 96px; top: 35px; width: 10px; height: 10px"></span>
+            <span class="btn-pixel__pixel" style="left: 17px; top: 35px; width: 20px; height: 10px"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IDENTITAS (Maskot & Logo intro) ============ -->
+    <section class="identitas" id="maskot-logo">
+      <div class="identitas__header">
+        <span class="section-badge">Maskot &amp; Logo</span>
+        <h2 class="section-title"><u>KENALI</u> IDENTITAS IT BOOTCAMP</h2>
+      </div>
+
+      <img class="identitas__poppy" src="assets/img/icon/bunga.png" alt="">
+      <div class="identitas__gemini-a">
+        <img src="assets/img/icon/lebah1.png" style="height: 226%; left: -24.9%; top: -43.27%; width: 201.35%" alt="">
+      </div>
+      <div class="identitas__gemini-b">
+        <img src="assets/img/icon/lebah2.png" style="height: 336.67%; left: -108.25%; top: -204.86%; width: 277.73%" alt="">
+      </div>
+
+      <div class="identitas__body">
+        <div class="identitas__text-col">
+          <h3 class="section-title identitas__title">
+            <u>UPGRADE</u> SKILL, UPGRADE MASA DEPAN!
+          </h3>
+          <p class="identitas__desc">
+            Menyatukan I, T, dan B dalam bentuk pohon voxel sebagai simbol
+            pertumbuhan, kolaborasi, dan langkah kecil yang membangun masa depan
+            digital.
+          </p>
+        </div>
+        <div class="identitas__frame">
+          <img class="identitas__frame-bg" src="assets/img/logo/logo_frame.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MASKOT (Mini Herta) ============ -->
+    <section class="maskot" id="maskot">
+      <div class="maskot__figure">
+        <img src="assets/img/maskot/maskot_full.png" alt="Maskot Chepyx">
+      </div>
+      <div class="maskot__content">
+        <div class="maskot__heading">
+          <h2 class="maskot__title">PROFIL CHEPYX</h2>
+          <img class="maskot__heart" src="assets/img/logo/heart.png" alt="Ikon hati Minecraft">
+        </div>
+        <p class="maskot__intro">
+          Simbol inovasi yang merepresentasikan generasi muda digital yang
+          tangkas, kreatif, serta berani beradaptasi di era transformasi
+          digital.
+        </p>
+        <div class="maskot__list">
+          <div class="maskot__item">
+            <div class="maskot__item-frame">
+              <img src="assets/img/maskot/maskot1.png" alt="Maskot 1">
+            </div>
+            <div class="maskot__item-copy">
+              <h3 class="maskot__item-title">CHE (Cheetah)</h3>
+              <p class="maskot__item-text">
+                Melambangkan kecepatan, ketangkasan, dan keberanian untuk
+                tangkas beradaptasi dengan perkembangan teknologi.
+              </p>
+            </div>
+          </div>
+
+          <div class="maskot__item">
+            <div class="maskot__item-frame">
+              <img src="assets/img/maskot/maskot2.png" alt="Maskot 2">
+            </div>
+            <div class="maskot__item-copy">
+              <h3 class="maskot__item-title">PY (Programming &amp; Creativity)</h3>
+              <p class="maskot__item-text">
+                Melambangkan integrasi kemampuan teknis pemrograman dan
+                kreativitas untuk mengubah ide menjadi inovasi nyata.
+              </p>
+            </div>
+          </div>
+
+          <div class="maskot__item">
+            <div class="maskot__item-frame">
+              <img src="assets/img/maskot/maskot3.png" alt="Maskot 3">
+            </div>
+            <div class="maskot__item-copy">
+              <h3 class="maskot__item-title">X (Explore &amp; Xperience)</h3>
+              <p class="maskot__item-text">
+                Melambangkan keberanian mengeksplorasi teknologi baru dan
+                memperluas pengalaman di dunia digital.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOKUMENTASI ============ -->
+    <section class="dokumentasi" id="dokumentasi">
+      <div class="dokumentasi__header">
+        <span class="section-badge">Dokumentasi</span>
+        <h2 class="section-title dokumentasi-title">
+          <u>KENANGAN</u> YANG DIBANGUN BERSAMA
+        </h2>
+      </div>
+      <img class="dokumentasi__icon" src="assets/img/icon/lensa.png" alt="">
+
+      <!-- Slider Utama (Cuma 1 Slider) -->
+      <div class="slider">
+        <div class="slide-track" id="slide-track-1">
+          <!-- Foto Asli Baris 1 (7 Items) -->
+          <div class="slide slide-wide">
+            <div class="dok-overlay">Klik untuk melihat</div>
+            <img src="assets/img/dokumentasi/bg-it-bootcamp-1.webp" alt="dokumentasi" loading="lazy" class="image">
+            <div class="zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="slide slide-wide">
+            <div class="dok-overlay">Klik untuk melihat</div>
+            <img src="assets/img/dokumentasi/bg-it-bootcamp-2.webp" alt="dokumentasi" loading="lazy" class="image">
+            <div class="zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="slide slide-wide">
+            <div class="dok-overlay">Klik untuk melihat</div>
+            <img src="assets/img/dokumentasi/bg-it-bootcamp-3.webp" alt="dokumentasi" loading="lazy" class="image">
+            <div class="zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="slide slide-wide">
+            <div class="dok-overlay">Klik untuk melihat</div>
+            <img src="assets/img/dokumentasi/bg-it-bootcamp-4.webp" alt="dokumentasi" loading="lazy" class="image">
+            <div class="zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="slide slide-wide">
+            <div class="dok-overlay">Klik untuk melihat</div>
+            <img src="assets/img/dokumentasi/bg-it-bootcamp-5.webp" alt="dokumentasi" loading="lazy" class="image">
+            <div class="zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="slide slide-wide">
+            <div class="dok-overlay">Klik untuk melihat</div>
+            <img src="assets/img/dokumentasi/bg-it-bootcamp-6.webp" alt="dokumentasi" loading="lazy" class="image">
+            <div class="zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="slide slide-wide">
+            <div class="dok-overlay">Klik untuk melihat</div>
+            <img src="assets/img/dokumentasi/bg-it-bootcamp-7.webp" alt="dokumentasi" loading="lazy" class="image">
+            <div class="zoom-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popup Viewer Baris 1 -->
+      <div class="popup" id="popup-1">
+        <span class="close-btn" id="close-btn-1">
+          <svg viewBox="0 0 56.326 56.326" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path id="Path_14" data-name="Path 14" d="M477.613,422.087l25.6-25.6a1.5,1.5,0,0,0-2.122-2.121l-25.6,25.6-25.6-25.6a1.5,1.5,0,1,0-2.121,2.121l25.6,25.6-25.6,25.6a1.5,1.5,0,0,0,2.121,2.122l25.6-25.6,25.6,25.6a1.5,1.5,0,0,0,2.122-2.122Z" transform="translate(-447.328 -393.924)" fill="#000000"></path>
+            </g>
+          </svg>
+        </span>
+        <button class="arrow-btn left-arrow" id="left-arrow-1">
+          <img src="assets/img/icon/arrow.png" alt="Left Arrow">
+        </button>
+        <button class="arrow-btn right-arrow" id="right-arrow-1">
+          <img src="assets/img/icon/arrow.png" alt="Right Arrow">
+        </button>
+        <div class="popup-content">
+          <img src="asset" class="large-image" id="large-image-1" alt="Dokumentasi Preview">
+          <div class="popup-caption" id="popup-caption-1">Deskripsi Foto</div>
+        </div>
+        <h1 class="index" id="index-1">01</h1>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <img class="footer__land" src="assets/img/background/footer-grass-block.png" alt="">
+      <div class="footer-container">
+        <div class="footer-main-row">
+          <div class="footer-brand-col">
+            <div class="brand-content">
+              <div class="logo-address-group">
+                <img src="assets/img/logo/logo_itb_full.png" alt="Logo IT Bootcamp" class="footer-logo">
+                <p class="footer-address">
+                  Jl. HS.Ronggo Waluyo, Puseurjaya, Telukjambe Timur, Karawang
+                </p>
+              </div>
+              <div class="footer-social-wrapper">
+                <a href="https://www.instagram.com/himtika_unsika" target="_blank" class="footer-social-link htmlify-external" data-htmlify-external="true" rel="noopener">
+                  <svg width="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/himtikaofficial/" target="_blank" class="footer-social-link htmlify-external" data-htmlify-external="true" rel="noopener">
+                  <svg width="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.2235 0H1.772C0.792 0 0 0.7735 0 1.73V22.265C0 23.222 0.792 24 1.772 24H22.2235C23.2035 24 24 23.222 24 22.27V1.73C24 0.773 23.203 0 22.2235 0ZM7.12 20.4515H3.558V8.9955H7.1205L7.12 20.4515ZM5.339 7.435C5.06781 7.43546 4.79918 7.38246 4.54849 7.27903C4.29779 7.17559 4.06995 7.02376 3.87798 6.83221C3.686 6.64065 3.53367 6.41314 3.4297 6.16267C3.32572 5.9122 3.27213 5.64369 3.272 5.3725C3.27213 5.10131 3.32572 4.8328 3.4297 4.58233C3.53367 4.33186 3.686 4.10435 3.87798 3.91279C4.06995 3.72124 4.29779 3.56941 4.54849 3.46597C4.79918 3.36254 5.06781 3.30954 5.339 3.31C5.88601 3.31 6.41061 3.5273 6.79741 3.91409C7.1842 4.30089 7.4015 4.82549 7.4015 5.3725C7.4015 5.91951 7.1842 6.44411 6.79741 6.83091C6.41061 7.2177 5.88601 7.435 5.339 7.435ZM20.4515 20.452H16.894V14.883C16.894 13.5565 16.8705 11.8455 15.042 11.8455C13.1905 11.8455 12.9095 13.2935 12.9095 14.789V20.4515H9.356V8.9955H12.769V10.5605H12.8155C13.289 9.6605 14.4515 8.7095 16.181 8.7095C19.786 8.7095 20.4515 11.0815 20.4515 14.1655V20.452Z"></path>
+                  </svg>
+                </a>
+                <a href="https://www.youtube.com/@HimtikaOfficial" target="_blank" class="footer-social-link htmlify-external" data-htmlify-external="true" rel="noopener">
+                  <svg width="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                  </svg>
+                </a>
+                <a href="https://www.tiktok.com/@himtika_unsika" target="_blank" class="footer-social-link htmlify-external" data-htmlify-external="true" rel="noopener">
+                  <svg width="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path>
+                  </svg>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=himtika@unsika.ac.id" target="_blank" class="footer-social-link htmlify-external" data-htmlify-external="true" rel="noopener">
+                  <svg width="24" viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.66626 5.1665H23.3333C24.3403 5.1665 25.1661 5.99247 25.1663 6.99951V20.9995C25.1663 22.0067 24.3404 22.8335 23.3333 22.8335H4.66626C3.65922 22.8333 2.83325 22.0066 2.83325 20.9995V6.99951C2.83342 6.05552 3.55932 5.27085 4.47974 5.17627L4.66626 5.1665ZM23.0686 8.90869L13.9993 14.5767L4.93188 8.90869L4.16626 8.43115V21.4995H23.8333V8.43115L23.0686 8.90869ZM4.40161 7.42432L13.7346 13.2573L14.0002 13.4224L14.2649 13.2573L23.5979 7.42432L25.0764 6.49951H2.9231L4.40161 7.42432Z" fill="currentColor" stroke="currentColor"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-grid-col">
+            <div class="footer-links-grid">
+              <div class="link-group tentang-kami">
+                <div>
+                  <h3 class="group-title">TENTANG KAMI</h3>
+                  <ul class="group-list">
+                    <li>
+                      <a href="../struktur-organisasi/index.html">Struktur Organisasi</a>
+                    </li>
+                    <li>
+                      <a href="../sejarah-himtika/index.html">Sejarah</a>
+                    </li>
+                    <li>
+                      <a href="../logo-himtika/index.html">Logo</a>
+                    </li>
+                    <li>
+                      <a href="../galeri-himtika/index.html">Galeri</a>
+                    </li>
+                    <li>
+                      <a href="../grand-design-himtika/index.html">Grand Design</a>
+                    </li>
+                    <li>
+                      <a href="../visi-misi/index.html">Visi Misi</a>
+                    </li>
+                    <li>
+                      <a href="../kontak-kami/index.html">Kontak Kami</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="link-group align-right-lg media-hp-footer">
+                <div>
+                  <h3 class="group-title">MEDIA</h3>
+                  <ul class="group-list">
+                    <li>
+                      <a href="https://www.instagram.com/himtika_unsika/" target="_blank" class="htmlify-external" data-htmlify-external="true" rel="noopener">Berita</a>
+                    </li>
+                    <li>
+                      <a href="../hikode/index.html" target="_blank">Artikel HIMTIKA</a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/cnc_himtika/" target="_blank" class="htmlify-external" data-htmlify-external="true" rel="noopener">Info Lomba</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="link-group align-center-lg">
+                <div>
+                  <h3 class="group-title">EVENT</h3>
+                  <ul class="group-list">
+                    <li>
+                      <a href="../cnc/index.html" target="_blank">Create and Compete</a>
+                    </li>
+                    <li>
+                      <a href="../himtika-exchange/index.html" target="_blank">HIMTIKA Exchange</a>
+                    </li>
+                    <li>
+                      <a href="../hgtc/index.html" target="_blank">HGTC</a>
+                    </li>
+                    <li>
+                      <a href="../studyclub/index.html" target="_blank">Study Club</a>
+                    </li>
+                    <li>
+                      <a href="../pekan-it/index.html" target="_blank">Pekan IT: NIC</a>
+                    </li>
+                    <li>
+                      <a href="../pekan-it/detail-semantik/index.html" target="_blank">Pekan IT: Semantik IC</a>
+                    </li>
+                    <li>
+                      <a href="../lkmmpd/index.html" target="_blank">LKMM-PD</a>
+                    </li>
+                    <li>
+                      <a href="../diesnatalis/index.html" target="_blank">Dies Natalis</a>
+                    </li>
+                    <li>
+                      <a href="index.html" target="_blank">IT Bootcamp</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="link-group align-right-lg aplikasi-publik">
+                <div>
+                  <h3 class="group-title">APLIKASI PUBLIK</h3>
+                  <ul class="group-list">
+                    <li>
+                      <a href="https://himtalks.vercel.app/himtalks" target="_blank" class="htmlify-external" data-htmlify-external="true" rel="noopener">HIMTALKS</a>
+                    </li>
+                    <li>
+                      <a href="../himtika-awards/index.html" target="_blank">HIMTIKA Award</a>
+                    </li>
+                    <li>
+                      <a href="../media-partner/index.html" target="_blank">Media Partner</a>
+                    </li>
+                    <li>
+                      <a href="../corporation/index.html" target="_blank">Corporation</a>
+                    </li>
+                    <li>
+                      <a href="../kalender/index.html" target="_blank">Kalender</a>
+                    </li>
+                    <li>
+                      <a href="../dosen/index.html" target="_blank">Tenaga Pendidik</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright-text">Licensed, Registered, and Authorized by</p>
+          <div class="authorized-brand">
+            <img src="assets/img/logo/HIMTIKA.webp" alt="HIMTIKA" class="mini-logo">
+            <span>HIMTIKA 2026</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back To HIMTIKA Button -->
+    <div class="Btn-parent">
+      <a href="../index.html">
+        <button class="Btn-child">
+          <div class="sign">
+            <img src="assets/img/logo/HIMTIKA.webp" width="38" height="38" alt="HIMTIKA">
+          </div>
+          <div class="text-button">
+            <h1>Back To <span>HIMTIKA</span></h1>
+          </div>
+        </button>
+      </a>
+    </div>
+    <!-- Back To HIMTIKA Button -->
+
+    <!-- Music Player -->
+    <div id="music-player" class="music-player" role="region" aria-label="Music player">
+      <button type="button" id="mp-toggle" class="music-player__toggle" aria-expanded="false" aria-controls="mp-panel" aria-label="Buka music player">
+        <svg class="music-player__icon-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+          <path d="M9 18V5l12-2v13"></path>
+          <rect x="3" y="16" width="6" height="5" fill="currentColor"></rect>
+          <rect x="15" y="14" width="6" height="5" fill="currentColor"></rect>
+        </svg>
+        <svg class="music-player__icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+          <path d="M5 5l14 14M19 5L5 19"></path>
+        </svg>
+      </button>
+
+      <div id="mp-panel" class="music-player__panel">
+        <div class="music-player__card">
+          <div class="music-player__disc">
+            <img id="mp-cover" class="music-player__cover" alt="" hidden="">
+          </div>
+
+          <div class="music-player__info">
+            <span class="music-player__label">Now Playing</span>
+            <strong id="mp-title" class="music-player__title">Memuat…</strong>
+            <span id="mp-artist" class="music-player__artist"></span>
+          </div>
+
+          <div class="music-player__eq" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+
+          <button type="button" id="mp-play" class="music-player__play" aria-label="Putar musik">
+            <svg class="music-player__icon-play" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 5v14l11-7z" fill="currentColor"></path>
+            </svg>
+            <svg class="music-player__icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="currentColor"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Music Player -->
+
+    <!-- JS -->
+    <script src="assets/js/entry-gate.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/music-player.js"></script>
+  
+
+</body></html>

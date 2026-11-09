@@ -1,0 +1,700 @@
+.karya-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  height: 120svh;
+  overflow: hidden;
+}
+.karya-hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+.karya-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom center;
+}
+.karya-hero__content {
+  position: absolute;
+  top: 0;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  width: 100%;
+  max-width: var(--container-w);
+  padding-inline: var(--side-pad);
+  margin-inline: auto;
+  right: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  z-index: 2;
+  text-align: left;
+}
+.karya-hero__title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+.karya-hero__title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+}
+.karya-hero__subtitle {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--putih-gading);
+  text-shadow: 3px 3px 2px rgba(0,0,0,1);
+  max-width: 626px;
+  margin: 0;
+  text-align: left;
+}
+.karya-hero__subtitle::selection {
+  background-color: var(--hijau-rumput-gelap);
+  color: var(--putih-gading);
+}
+.karya-hero__cta-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: fit-content;
+  gap: 30px;
+}
+.karya-hero__cta {
+  width: fit-content;
+  height: auto;
+  /* min-height: 60px; */
+  padding: 17px 48px;
+  flex-shrink: 0;
+}
+.karya-hero__title-text{
+  font-family:var(--font-pixel);
+  font-size:40px;
+  line-height:1.3;
+  color:var(--putih);
+  text-shadow:4px 4px 0 rgba(0,0,0,0.55);
+  margin:0;
+}
+.karya-hero__title-text::selection {
+  background-color: var(--hijau-rumput-gelap);
+  color: var(--putih-gading);
+}
+.karya-hero__title-text u{
+  text-decoration-line:underline;
+  text-decoration-color:var(--hijau-rumput);
+  text-decoration-thickness:16%;
+  text-underline-position:from-font;
+}
+
+/* ---------- Navbar "Back to Home" (ganti menu nav biasa) ---------- */
+.nav__link-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--font-pixel);
+  font-size:13px;
+  color:var(--putih);
+  text-decoration:none;
+  background-color:var(--biru-tombol);
+  padding:10px 18px;
+  border:2px solid var(--hitam);
+  box-shadow:4px 4px 0px 0px var(--putih-gading);
+  transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  white-space:nowrap;
+  user-select:none;
+}
+.nav__link-badge:hover{
+  background-color:var(--hijau-rumput);
+  color:var(--putih);
+  transform:translate(-2px,-2px);
+  box-shadow:6px 6px 0px 0px var(--putih-gading);
+}
+.nav__link-badge:active{
+  transform:translate(2px,2px);
+  box-shadow:2px 2px 0px 0px var(--hitam);
+}
+
+@media (max-width:768px){
+  .nav__link-badge{
+    font-size:11px;
+    padding:8px 12px;
+    box-shadow:3px 3px 0px 0px var(--putih-gading);
+  }
+
+  /* Tampilkan tombol hamburger di mobile */
+  .hamburger{
+    display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    width:44px;
+    height:44px;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    z-index:60;
+  }
+  .hamburger span{
+    display:block !important;
+    width:26px !important;
+    height:3px !important;
+    background-color:#ffffff !important;
+    border-radius:2px;
+    transition:transform .3s ease, opacity .3s ease, background-color .3s ease;
+  }
+  .hamburger[aria-expanded="true"] span:nth-child(1){ transform:translateY(8px) rotate(45deg); }
+  .hamburger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .hamburger[aria-expanded="true"] span:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
+
+  /* Panel dropdown nav di mobile */
+  .nav{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    left:0; right:0;
+    width:100%;
+    background-color:rgba(19,35,33,0.95);
+    backdrop-filter:blur(12px);
+    padding:20px;
+    border-bottom:2px solid var(--biru-tombol);
+    box-shadow:0px 10px 20px rgba(0,0,0,0.5);
+    max-height:none;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-10px);
+    transition:all .3s ease;
+    z-index:40;
+  }
+  .nav.is-open{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+  .nav__link-badge{
+    width:100%;
+    font-size:12px;
+    padding:12px 16px;
+  }
+}
+
+/* ---------- Section wrapper umum (Hall of Fame & More Creations) ---------- */
+.karya-section{
+  max-width:var(--container-w);
+  margin:0 auto;
+  padding:100px var(--side-pad) 0;
+}
+.karya-section + .karya-section{ padding-top:120px; }
+.karya-section--more{ padding-bottom:220px; }
+.karya-section__head{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:16px;
+  margin-bottom:48px;
+}
+
+/* ---------- Grid kartu: flex + center, supaya baris sisa (mis. 2 dari 5)
+   rata tengah, bukan menempel kiri seperti CSS grid ---------- */
+.karya-cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:32px;
+}
+.karya-card{
+  flex:0 1 calc((100% - 64px) / 3);
+  max-width:calc((100% - 64px) / 3);
+}
+
+/* ---------- Kartu poster (overlay judul di atas foto, mengikuti
+   bahasa visual "caption di atas gambar" yang sama seperti .skill-card) ---------- */
+
+/* ============ CARD MINECRAFT FRAME ============ */
+.karya-card {
+  position: relative;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  background: var(--coklat-dirt);
+  border-radius: 0;
+  overflow: visible;
+
+  /* Kiri, kanan, atas, bawah dengan warna berbeda */
+  border-style: solid;
+  border-width: 8px;
+  border-color:
+    var(--coklat-dirt-light)
+    var(--coklat-dirt-mid)
+    var(--coklat-dirt-dark)
+    var(--coklat-dirt-lighter);
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
+}
+
+/* Susunan frame: sisi kiri/kanan full dari atas,
+   bagian bawah menutup seluruh lebar card */
+.karya-card::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  height: 8px;
+  background: var(--coklat-dirt-dark);
+  pointer-events: none;
+  z-index: 4;
+}
+.karya-card__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/4;
+  overflow: hidden;
+  background: var(--coklat-dirt-dark);
+}
+.karya-card__frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.karya-card__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 40%,
+    rgba(0,0,0,.85) 100%
+  );
+}
+.karya-card__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.karya-card__group,
+.karya-card__title {
+  font-family: var(--font-pixel);
+  color: var(--putih);
+  text-shadow: 2px 2px 0 rgba(0,0,0,.6);
+}
+.karya-card__group {
+  font-size: clamp(9px, 4.5cqw, 16px);
+  line-height: 1;
+}
+.karya-card__title {
+  font-size: clamp(10px, 6cqw, 20px);
+  line-height: 1;
+  font-weight: 400;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ============ CARD FOOTER ============ */
+.karya-card__footer {
+  padding: 20px;
+  /* display: flex;
+  justify-content: center; */
+  background: var(--coklat-dirt);
+}
+/* Tombol Kunjungi Website */
+
+.karya-card__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  margin-bottom: 5px;
+  overflow: hidden;
+
+  background: var(--putih-gading);
+  color: var(--coklat-dirt-dark);
+  border: none;
+  border-radius: 0;
+
+  /* Efek 3D seperti CTA hero */
+  filter: drop-shadow(0px 8px 0px #9c9a90);
+  box-shadow:
+    inset 4px 4px 0 #ffffff,
+    inset -4px -4px 0 #c4c2b8;
+
+  transition:
+    transform .15s ease,
+    filter .15s ease,
+    background .15s ease;
+}
+.karya-card__link-label {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-pixel);
+  font-size: clamp(8px, 4cqw, 15px);
+  line-height: 1.5;
+  text-align: center;
+}
+/* Duplikasi konsep btn-pixel__pixel */
+.karya-card__pixel {
+  position: absolute;
+  background: rgba(70,70,70,.13);
+  pointer-events: none;
+}
+.karya-card__pixel--1 {
+  left: 12%;
+  top: 8px;
+  width: 20px;
+  height: 10px;
+}
+.karya-card__pixel--2 {
+  left: 25%;
+  bottom: 5px;
+  width: 10px;
+  height: 10px;
+}
+.karya-card__pixel--3 {
+  right: 12%;
+  top: 6px;
+  width: 20px;
+  height: 10px;
+}
+.karya-card__pixel--4 {
+  right: 25%;
+  bottom: 6px;
+  width: 10px;
+  height: 10px;
+}
+.karya-card__pixel--5 {
+  left: 5%;
+  bottom: 12px;
+  width: 10px;
+  height: 10px;
+}
+.karya-card__pixel--6 {
+  right: 5%;
+  bottom: 8px;
+  width: 20px;
+  height: 10px;
+}
+
+/* Hover: tombol sedikit lebih terang */
+.karya-card__link:hover {
+  background: #f5f4ec;
+  color: var(--coklat-dirt-dark);
+  filter: drop-shadow(0px 8px 0px #9c9a90) brightness(1.05);
+}
+/* Active: tombol turun dan shadow mengecil */
+.karya-card__link:active {
+  transform: translateY(4px);
+  filter: drop-shadow(0px 4px 0px #9c9a90) brightness(.95);
+}
+
+/* ---------- Badge peringkat (khusus Hall of Fame) ---------- */
+.karya-rank {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  background: var(--coklat-dirt-dark);
+  border: 2px solid var(--hitam);
+  box-shadow: 4px 4px 0 var(--hitam);
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  color: var(--putih);
+}
+
+.karya-rank svg{ width:16px; height:16px; flex-shrink:0; }
+.karya-rank--1{ background:#caa227; }
+.karya-rank--1 svg{ color:#fff6d9; }
+.karya-rank--2{ background:#8d96a3; }
+.karya-rank--2 svg{ color:#f4f6f8; }
+.karya-rank--3{ background:#a1663c; }
+.karya-rank--3 svg{ color:#ffe9d6; }
+
+
+/* ============ CARD SLIDERS ============ */
+.karya-slider__dots {
+  display: none;
+}
+
+/* Slider Hall of Fame pada tablet dan mobile */
+@media (max-width: 1024px) {
+  .karya-section--hof {
+    overflow: hidden;
+  }
+  .karya-cards--hof {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    padding: 24px 16px 28px;
+    margin: -24px -16px -28px;
+    scroll-padding-inline: 16px;
+  }
+  .karya-cards--hof::-webkit-scrollbar,
+  .karya-cards--more::-webkit-scrollbar {
+    display: none;
+  }
+  /* Dua card terlihat di tablet */
+  .karya-cards--hof .karya-card {
+    flex: 0 0 calc((100% - 32px - 24px) / 2);
+    max-width: calc((100% - 32px - 24px) / 2);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  /* Ruang ekstra agar card ketiga bisa digeser
+     sampai posisi awal slider */
+  .karya-cards--hof::after {
+    content: "";
+    flex: 0 0 calc((100% - 32px - 24px) / 2);
+  }
+  .karya-section--hof .karya-slider__dots {
+    display: flex;
+  }
+}
+
+/* Slider More Creations hanya pada mobile */
+@media (max-width: 768px) {
+  .karya-section--more {
+    overflow: hidden;
+  }
+  .karya-cards--hof,
+  .karya-cards--more {
+    gap: 20px;
+  }
+  .karya-cards--hof .karya-card {
+    flex: 0 0 calc(100% - 32px);
+    max-width: calc(100% - 32px);
+  }
+  .karya-cards--hof::after {
+    display: none;
+  }
+  .karya-cards--more {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    padding: 24px 16px 28px;
+    margin: -24px -16px -28px;
+    scroll-padding-inline: 16px;
+  }
+  .karya-cards--more .karya-card {
+    flex: 0 0 calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  .karya-section--more .karya-slider__dots {
+    display: flex;
+  }
+  .karya-rank {
+    font-size: 11px;
+    padding: 7px 9px;
+  }
+}
+
+/* Pagination dots bersama */
+.karya-slider__dots {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+.karya-slider__dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #a5a5a5;
+  cursor: pointer;
+  transition: width .25s ease, background .25s ease;
+}
+.karya-slider__dot.is-active {
+  width: 28px;
+  background: var(--hijau-rumput);
+}
+
+/* Button BackToHIMTIKA */
+.karya__btn-parent {
+    position: fixed;
+    bottom: 32px;
+    right: 36px;
+    z-index: 10;
+}
+
+.karya__btn-parent a {
+    text-decoration: none !important;
+}
+
+.karya__btn-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(255, 255, 255);
+}
+
+/* plus sign */
+.karya__sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* text */
+.karya__btn-child .karya__text-button {
+    width: 0%;
+    opacity: 0;
+    color: rgba(255, 255, 255);
+    background-color: rgba(10, 198, 194);
+    transition-duration: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.karya__btn-child .karya__text-button h1 {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 0.75rem;
+}
+.karya__btn-child .karya__text-button h1 span {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: 0px -2px 0px rgba(11, 223, 219);
+}
+/* hover effect on button width */
+.karya__btn-child:hover {
+    width: 160px;
+    border-radius: 40px;
+    transition-duration: .3s;
+    box-shadow: 0px 0px 15px 1px rgba(11, 223, 219);
+}
+
+.karya__btn-child:hover .karya__sign {
+    width: 35%;
+    transition-duration: .3s;
+    padding-left: 5px;
+}
+/* hover effect button's text */
+.karya__btn-child:hover .karya__text-button {
+    opacity: 1;
+    width: 65%;
+    transition-duration: .3s;
+    /* padding-right: 5px; */
+}
+/* button click effect*/
+.karya__btn-child:active {
+    transform: translate(2px ,2px);
+}
+/* Button BackToHIMTIKA */
+
+/* ============ RESPONSIVE: TABLET ============ */
+@media (max-width:1024px){ 
+  .karya-hero__subtitle {
+    max-width: 520px;
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .karya-hero__cta {
+    width: fit-content;
+    min-height: 52px;
+    padding: 12px 34px;
+  }
+  .karya-hero__title-text{ font-size:34px; }
+  .karya-card{
+    flex:0 1 calc((100% - 32px) / 2);
+    max-width:calc((100% - 32px) / 2);
+  }
+  .karya-cards{ gap:24px; }
+}
+
+/* ============ RESPONSIVE: MOBILE ============ */
+@media (max-width:768px){
+    
+  .karya-hero {
+    min-height: 100svh;
+    height: 120svh;
+  }
+  .karya-hero__content {
+    gap: 24px;
+  }
+  .karya-hero__title-group {
+    gap: 20px;
+  }
+  .karya-hero__subtitle {
+    max-width: 520px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .karya-hero__cta-wrapper {
+    width: fit-content;
+    gap: 12px;
+  }
+  .karya-hero__cta {
+    width: fit-content;
+    height: auto;
+    min-height: 40px;
+    padding: 12px 40px;
+  }
+  .karya-hero__title-text{ font-size:22px; line-height:1.5; }
+  .karya-section{ padding:60px var(--side-pad) 0; }
+  .karya-section + .karya-section{ padding-top:80px; }
+  .karya-section__head{ margin-bottom:28px; }
+  .karya-section--more{ padding-bottom:180px; }
+  .karya-card{ flex:0 1 100%; max-width:100%; }
+  .karya-cards{ gap:20px; }
+  .karya-card__link { min-height: 38px; }
+  .karya__btn-parent { right: 12px; bottom: 12px; }
+}

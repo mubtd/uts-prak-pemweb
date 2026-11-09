@@ -1,0 +1,475 @@
+/*
+=====================================================================
+  PENDAFTARAN — Study Club PTI UMS
+  Dipakai bersama style.css (variabel warna, font, .btn-pixel,
+  .section-badge, .section-title, header & footer).
+  Muat SETELAH style.css.
+===================================================================== */
+
+/* ============ HEADER (versi solid, bukan di atas hero) ============ */
+.site-header--solid {
+  position: fixed;
+  background: var(--coklat-dirt);
+  border-bottom: 4px solid var(--hijau-rumput);
+  box-shadow: 0 4px 0 var(--hijau-rumput-shadow);
+  padding: 14px 64px;
+}
+.site-header--solid .brand { color: var(--putih); }
+
+/* ============ LAYOUT HALAMAN ============ */
+.daftar {
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding: 150px var(--side-pad) 120px;
+}
+
+/* ---------- Judul ---------- */
+.daftar__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 793px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+.daftar__title { text-align: center; }
+.daftar__intro {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--hitam);
+  margin-top: 8px;
+}
+.daftar__intro::selection,
+.info-card *::selection {
+  background-color: var(--hijau-rumput-gelap);
+  color: var(--putih-gading);
+}
+
+/* ---------- Isi: info + form ---------- */
+.daftar__body {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ============ PANEL INFO ============ */
+.daftar__info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: sticky;
+  top: 120px;
+}
+.info-card {
+  background: var(--coklat-dirt);
+  color: var(--putih);
+  padding: 28px 24px;
+  box-shadow:
+    inset 0 -8px 0 0 var(--coklat-dirt-dark),
+    inset -8px 0 0 0 var(--coklat-dirt-mid),
+    inset 8px 0 0 0 var(--coklat-dirt-light),
+    inset 0 8px 0 0 var(--coklat-dirt-lighter);
+}
+.info-card__title {
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.info-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.info-card__list li {
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.info-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: var(--hijau-rumput);
+  box-shadow: 2px 2px 0 var(--hitam);
+}
+
+/* Countdown (turunan dari .pendaftaran__countdown di style.css) */
+.info-card.pendaftaran__countdown .pendaftaran__countdown-clock span {
+  flex: 1 1 60px;
+  min-width: 0;
+  border-radius: 0;
+  border: 2px solid rgba(255, 255, 255, .55);
+}
+.pendaftaran__countdown-title.is-closed {
+  color: #ffb3a7;
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ============ FORM CARD ============ */
+.form-card {
+  background: var(--putih-gading);
+  border: 4px solid var(--hitam);
+  box-shadow: 10px 10px 0 var(--hitam);
+  padding: 40px;
+  position: relative;
+}
+.form-card::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  height: 12px;
+  background: var(--hijau-rumput);
+  border: 4px solid var(--hitam);
+  border-bottom: none;
+}
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 8px;
+}
+
+/* ---------- Field ---------- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.field--fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.field__label {
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--hitam);
+  padding: 0;
+}
+.field__input {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 16px; /* 16px mencegah auto-zoom di iOS */
+  color: var(--hitam);
+  background: var(--putih);
+  border: 3px solid var(--hitam);
+  border-radius: 0;
+  padding: 12px 14px;
+  box-shadow: inset 4px 4px 0 rgba(0, 0, 0, .12);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.field__input::placeholder { color: var(--abu-placeholder); opacity: .8; }
+.field__input:focus {
+  border-color: var(--hijau-rumput-gelap);
+  box-shadow: inset 4px 4px 0 rgba(0, 0, 0, .12), 4px 4px 0 var(--hijau-rumput);
+}
+select.field__input {
+  cursor: pointer;
+  padding-right: 40px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--hitam) 50%),
+    linear-gradient(135deg, var(--hitam) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+.field__textarea { resize: vertical; min-height: 130px; line-height: 1.5; }
+
+.field__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.field__counter {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--abu-placeholder);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* Error state */
+.field__error {
+  min-height: 0;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: #b3261e;
+  line-height: 1.3;
+}
+.field__error:empty { display: none; }
+.field.has-error .field__input {
+  border-color: #b3261e;
+  background: #fff4f2;
+}
+.field.has-error .chip span { border-color: #b3261e; }
+.field.is-valid .field__input { border-color: var(--hijau-rumput-gelap); }
+
+/* ---------- Chip checkbox (minat) ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+.chip { position: relative; cursor: pointer; }
+.chip input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+.chip span {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 16px;
+  background: var(--putih);
+  border: 3px solid var(--hitam);
+  box-shadow: 3px 3px 0 var(--hitam);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+  user-select: none;
+}
+.chip:hover span { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--hitam); }
+.chip input:checked + span {
+  background: var(--hijau-rumput);
+  color: var(--putih);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--hitam);
+}
+.chip input:focus-visible + span { outline: 3px solid var(--biru-tombol); outline-offset: 2px; }
+
+/* ---------- Checkbox persetujuan ---------- */
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.check input {
+  position: absolute;
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  cursor: pointer;
+}
+.check__box {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: var(--putih);
+  border: 3px solid var(--hitam);
+  box-shadow: 3px 3px 0 var(--hitam);
+  position: relative;
+}
+.check input:checked + .check__box { background: var(--hijau-rumput); }
+.check input:checked + .check__box::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  width: 7px;
+  height: 13px;
+  border: solid var(--putih);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.check input:focus-visible + .check__box { outline: 3px solid var(--biru-tombol); outline-offset: 2px; }
+.check__text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.field.has-error .check__box { border-color: #b3261e; }
+
+/* Honeypot disembunyikan dari pengguna */
+.hp {
+  position: absolute !important;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ---------- Status & aksi ---------- */
+.form-status {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.form-status:empty { display: none; }
+.form-status.is-error {
+  color: #b3261e;
+  background: #fff4f2;
+  border: 3px solid #b3261e;
+  padding: 10px 14px;
+}
+.form-status.is-info {
+  color: var(--hitam);
+  background: #fff9d6;
+  border: 3px solid var(--hitam);
+  padding: 10px 14px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 30px;
+  padding-bottom: 8px;
+}
+.form-actions .btn-pixel { width: 260px; }
+.btn-pixel:disabled,
+.btn-pixel.is-loading {
+  filter: grayscale(.7) drop-shadow(0 8px 0 #555);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ============ MODAL SUKSES ============ */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, .75);
+}
+.modal[hidden] { display: none; }
+.modal__box {
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  background: var(--coklat-dirt);
+  color: var(--putih);
+  padding: 36px 28px 40px;
+  border: 4px solid var(--hitam);
+  box-shadow: 8px 8px 0 var(--hijau-rumput);
+  animation: modalPop .35s ease;
+}
+.modal__title {
+  font-family: var(--font-pixel);
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.modal__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+@keyframes modalPop {
+  from { transform: scale(.85); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+/* Footer: pada halaman ini cukup 1 kolom brand */
+.page-daftar .footer-brand-col { width: 100%; }
+.page-daftar .footer-main-row { justify-content: center; }
+.page-daftar .footer-brand-col .brand-content,
+.page-daftar .footer-brand-col .logo-address-group { align-items: center; }
+.page-daftar .footer-address { text-align: center; }
+.page-daftar .site-footer { margin-top: 40px; }
+
+/* ============ RESPONSIVE: TABLET ============ */
+@media (max-width: 1024px) {
+  .site-header--solid { padding: 14px 32px; }
+  .daftar { padding-top: 130px; }
+  .daftar__body { grid-template-columns: 1fr; gap: 56px; }
+  .daftar__info {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .daftar__info .info-card { flex: 1 1 300px; }
+  .form-card { padding: 32px 28px; }
+}
+
+/* ============ RESPONSIVE: MOBILE ============ */
+@media (max-width: 768px) {
+  .site-header--solid { padding: 12px 20px; }
+  .site-header--solid .brand__name { font-size: 12px; }
+
+  .daftar { padding: 100px 20px 80px; }
+  .daftar__head { margin-bottom: 36px; gap: 12px; }
+  .daftar__intro { font-size: 14px; }
+
+  .daftar__info { flex-direction: column; gap: 24px; }
+  .info-card { padding: 22px 18px; }
+  .info-card__title { font-size: 13px; }
+  .info-card__list li { font-size: 13.5px; }
+  .info-card.pendaftaran__countdown .pendaftaran__countdown-clock { gap: 8px; }
+
+  .form-card {
+    padding: 28px 18px 24px;
+    border-width: 3px;
+    box-shadow: 6px 6px 0 var(--hitam);
+  }
+  .form-card::before { left: -3px; right: -3px; top: -3px; height: 10px; border-width: 3px; border-bottom: none; }
+  .form-card form { gap: 20px; }
+
+  .field-row { grid-template-columns: 1fr; gap: 20px; }
+  .field__label { font-size: 10px; }
+  .field__input { padding: 11px 12px; }
+  .chips { gap: 10px; }
+  .chip span { font-size: 13px; padding: 8px 12px; }
+  .check__text { font-size: 13px; }
+
+  .form-actions { flex-direction: column; gap: 20px; }
+  .form-actions .btn-pixel { width: 100%; height: 48px; }
+  .form-actions .btn-pixel__label { font-size: 12px; }
+
+  .modal__title { font-size: 15px; }
+  .modal__text { font-size: 14px; }
+  .modal__box .btn-pixel { width: 100%; height: 48px; }
+}
+
+@media (max-width: 380px) {
+  .site-header--solid .brand__name { display: none; }
+}
+
+/* Hormati preferensi pengurangan gerak */
+@media (prefers-reduced-motion: reduce) {
+  .modal__box { animation: none; }
+  .chip span, .field__input { transition: none; }
+}
