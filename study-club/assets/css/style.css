@@ -1857,7 +1857,7 @@ button{ font-family:inherit; cursor:pointer; }
   .about__deco--right {
     right: -10px;
     bottom: -30px;
-    width: 3000px; /* Disesuaikan agar tidak kebesaran di layar HP */
+    width: 120px; /* Disesuaikan agar tidak kebesaran di layar HP */
     height: auto;
   }
   .about__spacer{ height:20px; }
