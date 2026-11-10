@@ -276,25 +276,3 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.key === "ArrowRight") updatePopup(currentIndex + 1);
     });
 });
-
-// UPLOAD FILE
-  document.addEventListener("DOMContentLoaded", function () {
-	const fileInput = document.getElementById("bukti_pembayaran") || document.getElementById("payment_proof");
-	const uploadSuccess = document.getElementById("upload-success");
-	const changeFileButton = document.getElementById("change-file-button");
-	const uploadLabel = document.getElementById("upload-label");
-
-	if (!fileInput || !uploadSuccess || !changeFileButton || !uploadLabel) return;
-
-	fileInput.addEventListener("change", function () {
-		if (fileInput.files.length > 0) {
-			uploadSuccess.style.display = "inline";
-			changeFileButton.style.display = "inline-block";
-			uploadLabel.style.display = "none";
-		}
-	});
-
-	changeFileButton.addEventListener("click", function () {
-		fileInput.click(); // Buka dialog pilih file lagi
-	});
-});
