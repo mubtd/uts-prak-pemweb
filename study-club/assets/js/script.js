@@ -16,7 +16,7 @@ if (registrationCountdown) {
     minutes: registrationCountdown.querySelector("[data-countdown-minutes]"),
     seconds: registrationCountdown.querySelector("[data-countdown-seconds]"),
   };
-  const deadline = new Date(new Date().getFullYear(), 11, 1);
+  const deadline = new Date(new Date().getFullYear(), 10, 1);
 
   function updateRegistrationCountdown() {
     const remaining = Math.max(0, deadline.getTime() - Date.now());
